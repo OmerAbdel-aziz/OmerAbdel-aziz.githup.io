@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Optional: Reset default margins */
+    padding: 0; /* Optional: Reset default padding */
+  }
+  
+/* 
+   
+ --green-kelp: #293b1f;
+ --dallas: #6c5a28;
+ --shadow: #808245;
+ --black-haze: #e7e8e8;
+ --mantle: #889893;
+ --zorba: #a79f91;
+ --tower-gray: #abb8b9;
+ --gray-olive: #afae9c;
+ --cloud: #c0bfbd;
+ --pelorous: #489cc0;
+ */
+ 
+ /* --green-kelp: rgba(41,59,31,1);
+--dallas: rgba(108,90,40,1);
+--shadow: rgba(128,130,69,1);
+--black-haze: rgba(231,232,232,1);
+--mantle: rgba(136,152,147,1);
+--zorba: rgba(167,159,145,1);
+--tower-gray: rgba(171,184,185,1);
+--gray-olive: rgba(175,174,156,1);
+--cloud: rgba(192,191,189,1);
+--pelorous: rgba(72,156,192,1); */
