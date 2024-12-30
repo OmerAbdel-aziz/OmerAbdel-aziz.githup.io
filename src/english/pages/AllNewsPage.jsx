@@ -1,7 +1,7 @@
 import banner2 from "../../assets/images/banner2.jpg";
 import { useState, useEffect } from "react";
 import { supabase } from "../../utils/supabase";
-import Postcard from "../components/sub-components/Postcard";
+import Postcard from "../components/sub-components/PostCard";
 const AllNewsPage = ({ isHome = false }) => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);

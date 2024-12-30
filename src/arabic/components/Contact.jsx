@@ -8,7 +8,7 @@ const containerStyle = {
   height: "100%",
 };
 
-const location = [15.5974, 32.5356];
+const location = [10.5611937, 27.3402381];
 const Contact = () => {
   const form = useRef();
 
@@ -68,8 +68,9 @@ const Contact = () => {
                     color="gray"
                     size="lg"
                     placeholder="Last Name"
-                    name="last-name"
-                    className="focus:border-[#637C65] text-end"
+                    name="last-name border-none"
+                    className=" text-end"
+                    type="text"
                     containerProps={{
                       className: "!min-w-full",
                     }}
@@ -112,7 +113,7 @@ const Contact = () => {
                   size="lg"
                   placeholder="name@email.com"
                   name="email"
-                  className="focus:border-[#637C65] text-end"
+                  className="focus:border-[#637C65] text-end border-none"
                   containerProps={{
                     className: "!min-w-full",
                   }}
@@ -133,7 +134,7 @@ const Contact = () => {
                   color="gray"
                   placeholder="Message"
                   name="message"
-                  className="focus:border-[#637C65] rounded-lg hover:border-[#637C65] text-end"
+                  className="focus:border-[#637C65] rounded-lg hover:border-[#637C65] text-end border-none"
                   containerProps={{
                     className: "!min-w-full",
                   }}

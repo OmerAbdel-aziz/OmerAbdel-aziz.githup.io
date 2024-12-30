@@ -1,8 +1,8 @@
-import logo from "../assets/images/GCST.png";
+import logo from "../../assets/images/GCST.png";
 
 const AdminNav = () => {
   return (
-    <div className="sticky top-0 z-50 px-5 bg-[#36573c]">
+    <div className="sticky top-0 z-50 px-5 bg-[#36573c]" lang="ar">
       <div className="navbar ">
         <div className="flex-none gap-2">
           <div className="dropdown dropdown-start">
@@ -33,6 +33,19 @@ const AdminNav = () => {
               </li>
               <li>
                 <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+          <div className="ml-10">
+            <ul className="flex gap-6 justify-center items-center text-white font-cairo ">
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="/admin">Posts</a>
+              </li>
+              <li>
+                <a href="/admin/departments">Departments Content</a>
               </li>
             </ul>
           </div>

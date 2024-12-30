@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import AdminContentForm from "../AdminContentForm";
+import AdminContentForm from "../components/AddingContentForm";
+import PostTable from "../components/PostTable";
 
 const AboutEditingPanel = () => {
   return (
     <>
-      <div className="relative  w-full">
+      <div className="relative">
         <AdminContentForm />
       </div>
     </>

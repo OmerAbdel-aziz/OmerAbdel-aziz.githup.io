@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 const AdmissionPage = () => {
-  const [admissionTitle, setAdmissionTitle] = useState(" ");
-
   return (
     <>
       <div
@@ -52,11 +50,11 @@ const AdmissionPage = () => {
       <section class="bg-white  relative top-[55vh] min-h-screen">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="max-w-screen-lg text-gray-500 sm:text-lg  ">
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900  ">
+            {/* <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900  ">
               {admissionTitle}
             </h2>
 
-            <p>{admissionDescription}</p>
+            <p>{admissionDescription}</p> */}
           </div>
         </div>
       </section>

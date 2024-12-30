@@ -31,6 +31,7 @@ import HeroEditingPanel from "./admin/pages/PostEditingPanel";
 import AboutEditingPanel from "./admin/pages/AboutEditingPanel";
 import NotFound from "./english/pages/NotFound";
 import PostEditingPanel from "./admin/pages/PostEditingPanel";
+import PostAddingPage from "./admin/pages/PostAddingPage";
 
 function App() {
   return (
@@ -85,8 +86,9 @@ function App() {
           <AdminLayout>
             <Routes>
               <Route path="/" element={<AdminPanel />} />
-              <Route path="/edit-post" element={<PostEditingPanel />} />
-              <Route path="/edit-about" element={<AboutEditingPanel />} />
+              <Route path="/add-post" element={<PostAddingPage />} />
+              <Route path="/edit-post/:id" element={<PostEditingPanel />} />
+              <Route path="/edit-about/:id" element={<AboutEditingPanel />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AdminLayout>
