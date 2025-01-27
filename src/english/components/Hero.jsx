@@ -1,6 +1,6 @@
-import banner11 from "../../assets/images/banner11.jpg";
-import banner2 from "../../assets/images/banner2.jpg";
-import banner3 from "../../assets/images/banner3.jpg";
+import banner11 from "../../../public/assets/images/banner11.jpg";
+import banner2 from "../../../public/assets/images/banner2.jpg";
+import banner3 from "../../../public/assets/images/banner3.jpg";
 import React, { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -21,9 +21,9 @@ const Hero = () => {
                   Welcome to Ghibaish College
                 </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Shaping the future, one mind at a time. <br /> Discover a
+                  world of knowledge, innovation, and opportunity at our vibrant
+                  campus.
                 </p>
               </div>
             </div>
@@ -54,11 +54,14 @@ const Hero = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="max-w-md md:max-w-2xl md:justify-start md:text-left md:items-start md:right-[30%] md:relative px-10 md:px-0">
-                <h1 className="mb-5 text-5xl font-bold">Our Vision</h1>
+                <h1 className="mb-5 text-5xl font-bold">
+                  Your Journey to Excellence Begins Here
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Empowering students with education, skills, and values for a
+                  brighter tomorrow. <br />
+                  Explore our diverse programs and state-of-the-art facilities
+                  designed to help you succeed.
                 </p>
               </div>
             </div>
@@ -88,11 +91,13 @@ const Hero = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-neutral-content text-center">
               <div className="max-w-md md:max-w-2xl md:justify-start md:text-left md:items-start md:right-[30%] md:relative px-10 md:px-0">
-                <h1 className="mb-5 text-5xl font-bold">Our Mission</h1>
+                <h1 className="mb-5 text-5xl font-bold">
+                  A Home for Learning, Growth, and Success
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Where passion meets purpose.
+                  <br /> Join our community of scholars and achievers to unlock
+                  your full potential.
                 </p>
               </div>
             </div>

@@ -1,7 +1,35 @@
 import React, { useRef } from "react";
-import { Button, Input, Textarea, Typography } from "@material-tailwind/react";
+import { useForm } from "react-hook-form";
+import { Button, Typography } from "@material-tailwind/react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import emailjs from "emailjs-com";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Form } from "@/components/ui/form";
+import CustomFormFiled from "../../english/components/sub-components/CustomFormFiled";
+import { Textarea } from "../../components/ui/textarea";
+
+function onSubmit(values) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      form.current,
+      "YOUR_USER_ID"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Failed to send message, please try again.");
+      }
+    );
+}
 
 const containerStyle = {
   width: "100%",
@@ -9,9 +37,20 @@ const containerStyle = {
 };
 
 const location = [10.5611937, 27.3402381];
+const schema = z.object({
+  firstName: z.string().nonempty("First name is required"),
+  lastName: z.string().nonempty("Last name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().nonempty("Message is required"),
+});
 const Contact = () => {
-  const form = useRef();
-
+  const form = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      username: "",
+      email: "",
+    },
+  });
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -50,7 +89,7 @@ const Contact = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2 items-start">
-            <form
+            {/* <form
               action="#"
               className="flex flex-col gap-4 lg:max-w-lg ml-10 text-end"
               ref={form}
@@ -58,21 +97,15 @@ const Contact = () => {
             >
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Typography
-                    variant="small"
-                    className="mb-2 text-left font-medium !text-gray-900  text-end"
-                  >
-                    الاسم الاخير
-                  </Typography>
+                 
                   <Input
                     color="gray"
                     size="lg"
                     placeholder="Last Name"
-                    name="last-name border-none"
-                    className=" text-end"
-                    type="text"
+                    name="last-name"
+                    className="text-end !border-[0.5px]" // Makes border very thin
                     containerProps={{
-                      className: "!min-w-full",
+                      className: "!min-w-full !border-[0.5px]",
                     }}
                     labelProps={{
                       className: "hidden",
@@ -80,20 +113,15 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <Typography
-                    variant="small"
-                    className="mb-2 text-left font-medium !text-gray-900 text-end"
-                  >
-                    الاسم الاول
-                  </Typography>
+                 
                   <Input
                     color="gray"
                     size="lg"
                     placeholder="First Name"
                     name="first-name"
-                    className="focus:border-[#637C65] text-end"
+                    className="focus:border-t-gray-900"
                     containerProps={{
-                      className: "!min-w-full",
+                      className: "min-w-full",
                     }}
                     labelProps={{
                       className: "hidden",
@@ -102,12 +130,7 @@ const Contact = () => {
                 </div>
               </div>
               <div>
-                <Typography
-                  variant="small"
-                  className="mb-2 text-left font-medium !text-gray-900 text-end"
-                >
-                  الايميل
-                </Typography>
+              
                 <Input
                   color="gray"
                   size="lg"
@@ -123,12 +146,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <Typography
-                  variant="small"
-                  className="mb-2 text-left font-medium !text-gray-900 text-end"
-                >
-                  الرسالة
-                </Typography>
+               
                 <Textarea
                   rows={6}
                   color="gray"
@@ -149,7 +167,76 @@ const Contact = () => {
               >
                 ارسال
               </button>
-            </form>
+            </form> */}
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
+              >
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <Typography
+                      variant="small"
+                      className="mb-2 font-medium !text-gray-900 text-end"
+                    >
+                      الاسم الاول
+                    </Typography>
+                    <CustomFormFiled
+                      name="firstName"
+                      label="الاسم الاول"
+                      control={form.control}
+                      className="border-none"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <Typography
+                      variant="small"
+                      className="mb-2 font-medium !text-gray-900  text-end"
+                    >
+                      الاسم الاخير
+                    </Typography>
+                    <CustomFormFiled
+                      name="lastName"
+                      label="الاسم الاخير"
+                      control={form.control}
+                      className="border-none"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography
+                    variant="small"
+                    className="font-medium !text-gray-900 text-end"
+                  >
+                    الايميل
+                  </Typography>
+                  <CustomFormFiled
+                    name="email"
+                    label="الايميل"
+                    control={form.control}
+                    className="border-none"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography
+                    variant="small"
+                    className="text-end font-medium !text-gray-900"
+                  >
+                    الرسالة
+                  </Typography>
+                  <Textarea className="focus:border-[#637C65] rounded-lg hover:border-[#637C65] text-end" />
+                </div>
+                <div className="flex w-full">
+                  <Button
+                    type="submit"
+                    className="bg-[#1E1E1E] hover:bg-[#637C65] w-full"
+                  >
+                    ارسال
+                  </Button>
+                </div>
+              </form>
+            </Form>
             <div className="z-10 rounded-lg overflow-clip ">
               <MapContainer
                 center={location}

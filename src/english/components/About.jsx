@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/Logo.gif";
+import Logo from "../../../public/assets/images/Logo.gif";
 import { useState } from "react";
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
             />
             <div className="text-center lg:text-left md:w-3/4">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-content-base">
-                Welcome to Our College
+                About the College
               </h2>
 
               <div id="accordion-custom">
@@ -30,7 +30,7 @@ const About = () => {
                     onClick={() => toggleAccordion(1)}
                     className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                   >
-                    <span>What is Flowbite?</span>
+                    <span>History & Foundation</span>
                     <svg
                       className={`w-3 h-3 transform ${
                         openIndex === 1 ? "rotate-180" : ""
@@ -51,20 +51,18 @@ const About = () => {
                   {openIndex === 1 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        Flowbite is an open-source library of interactive
-                        components built on top of Tailwind CSS including
-                        buttons, dropdowns, modals, navbars, and more.
-                      </p>
-                      <p className="text-gray-500">
-                        Check out this guide to learn how to{" "}
-                        <a
-                          href="/docs/getting-started/introduction/"
-                          className="text-blue-600 hover:underline"
-                        >
-                          get started
-                        </a>{" "}
-                        and start developing websites even faster with
-                        components on top of Tailwind CSS.
+                        Ghibaish College of Science and Technology was
+                        established in Ghibaish in 2017 as a private institution
+                        specializing in technical sciences, including
+                        management, economics, law, and information technology.
+                        It operates under the Directorate of Private and Foreign
+                        Education at the Sudanese Ministry of Higher Education
+                        and Scientific Research. The college grants bachelor’s
+                        and diploma degrees in five disciplines through
+                        distinguished academic programs. Diploma students
+                        complete 101 credit hours across four semesters, while
+                        bachelor’s students complete 161–174 credit hours across
+                        eight semesters over four years.
                       </p>
                     </div>
                   )}
@@ -76,7 +74,7 @@ const About = () => {
                     onClick={() => toggleAccordion(2)}
                     className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                   >
-                    <span>Is there a Figma file available?</span>
+                    <span>Vision</span>
                     <svg
                       className={`w-3 h-3 transform ${
                         openIndex === 2 ? "rotate-180" : ""
@@ -97,20 +95,8 @@ const About = () => {
                   {openIndex === 2 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        Flowbite is first conceptualized and designed using the
-                        Figma software so everything you see in the library has
-                        a design equivalent in our Figma file.
-                      </p>
-                      <p className="text-gray-500">
-                        Check out the{" "}
-                        <a
-                          href="https://flowbite.com/figma/"
-                          className="text-blue-600 hover:underline"
-                        >
-                          Figma design system
-                        </a>{" "}
-                        based on the utility classes from Tailwind CSS and
-                        components from Flowbite.
+                        To become a leading college locally and regionally,
+                        distinguished globally.
                       </p>
                     </div>
                   )}
@@ -122,9 +108,7 @@ const About = () => {
                     onClick={() => toggleAccordion(3)}
                     className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                   >
-                    <span>
-                      What are the differences between Flowbite and Tailwind UI?
-                    </span>
+                    <span>Mission</span>
                     <svg
                       className={`w-3 h-3 transform ${
                         openIndex === 3 ? "rotate-180" : ""
@@ -145,14 +129,76 @@ const About = () => {
                   {openIndex === 3 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        The main difference is that the core components from
-                        Flowbite are open source under the MIT license, whereas
-                        Tailwind UI is a paid product.
+                        Ghibaish College of Science and Technology strives to
+                        provide outstanding educational, research, and
+                        consultancy services at local, regional, and
+                        international levels. It is committed to social
+                        responsibility through qualified human resources,
+                        advanced curricula, a stimulating educational and
+                        technological environment, and effective local and
+                        international partnerships. The college aims to prepare
+                        competent graduates who meet the needs of the labor
+                        market and development requirements, adhering to quality
+                        standards and academic accreditation.
                       </p>
-                      <p className="mb-2 text-gray-500">
-                        We recommend using both Flowbite, Flowbite Pro, and even
-                        Tailwind UI to combine their strengths.
-                      </p>
+                    </div>
+                  )}
+                </div>
+                {/* Accordion Item 4 */}
+                <div>
+                  <button
+                    onClick={() => toggleAccordion(4)}
+                    className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                  >
+                    <span>Goals</span>
+                    <svg
+                      className={`w-3 h-3 transform ${
+                        openIndex === 4 ? "rotate-180" : ""
+                      }`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5 5 1 1 5"
+                      />
+                    </svg>
+                  </button>
+                  {openIndex === 4 && (
+                    <div className="py-5 border-b border-gray-200">
+                      <ol className="list-decimal list-inside text-gray-500">
+                        <li>
+                          Equip students with knowledge and skills in various
+                          academic disciplines.
+                        </li>
+                        <li>
+                          Align educational outcomes with development needs and
+                          labor market demands.
+                        </li>
+                        <li>
+                          Support scientific and applied research efforts in
+                          various fields.
+                        </li>
+                        <li>
+                          Provide the necessary infrastructure to support
+                          educational processes, services, and student
+                          activities.
+                        </li>
+                        <li>
+                          Expand partnerships and enhance relationships with
+                          universities and research institutions locally and
+                          internationally.
+                        </li>
+                        <li>
+                          Strengthen the college’s role in community service by
+                          offering consultancy and training programs in various
+                          aspects of development.-
+                        </li>
+                      </ol>
                     </div>
                   )}
                 </div>

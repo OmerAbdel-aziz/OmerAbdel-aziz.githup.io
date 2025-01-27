@@ -1,5 +1,3 @@
-import banner2 from "../../assets/images/banner2.jpg";
-
 const Centers = () => {
   return (
     <div
@@ -13,15 +11,24 @@ const Centers = () => {
               Explore our Research Centers & Institutes
             </h2>
             <p className="mb-4">
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick, but big
-              enough to deliver the scope you want at the pace you need. Small
-              enough to be simple and quick, but big enough to deliver the scope
-              you want at the pace you need.
-            </p>
-            <p>
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick.
+              The institutes and research centers at our college are a
+              cornerstone for fostering innovation and academic excellence. We
+              believe that scientific research is the driving force behind
+              knowledge development and addressing local and global challenges.
+              Through our specialized centers, we provide an advanced research
+              environment that combines the latest technologies with outstanding
+              academic expertise. This enables researchers to conduct pioneering
+              studies in diverse fields such as applied sciences, humanities,
+              engineering, medicine, and more. These centers work to enhance
+              collaboration between the college and local and international
+              research institutions, offering opportunities for students and
+              academics to participate in innovative research projects. We also
+              strive to align scientific research with community needs,
+              providing practical solutions that contribute to sustainable
+              development.
+              <br />
+              Join us to explore a world of research opportunities that inspire
+              creativity and unlock potential.
             </p>
 
             <a

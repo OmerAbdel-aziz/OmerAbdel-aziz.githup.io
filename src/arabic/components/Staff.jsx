@@ -1,4 +1,20 @@
 import React from "react";
+import StaffCard from "./sub-components/StaffCard";
+import { motion } from "framer-motion";
+
+const staff = [
+  { name: "بروفيسور عبد الباسط ادم مريود", role: "رئيس المجلس و المؤسس" },
+  { name: "بروفسور احمد محمدين التوم", role: "عضو مجلس الأمناء" },
+  { name: "بروفسور احمد اسماعيل حسين  ", role: "عضو مجلس الأمناء" },
+  { name: "بروفسور سيد فضل علي المولي", role: "مدير الكلية" },
+  { name: "دكتور الصادق محمد ادم على", role: "عضو مجلس الأمناء" },
+  { name: "دكتور ادم الحاج احمد يس", role: "عضو مجلس الأمناء" },
+  { name: "دكتور صلاح المصري", role: "عضو مجلس الأمناء" },
+  { name: "الامير عبد القادر علي محمد عبيد الله", role: "عضو مجلس الأمناء" },
+  { name: " الاستاذة انشراح محمد بابكر", role: "عضو مجلس الأمناء" },
+  { name: "الاستاذ قصي عبد الباسط ادم    ", role: "عضو مجلس الأمناء" },
+  { name: "الشيخ عثمان ادم مريود ", role: "عضو مجلس الأمناء" },
+];
 
 const Staff = () => {
   return (
@@ -11,19 +27,19 @@ const Staff = () => {
           <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
             <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
               <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-content-base">
-                هيئة التدريس
+                إدارة الكلية
               </h2>
-              <p class="font-light lg:mb-16 sm:text-xl ">
-                لكل شخص الحق في أن يلجأ إلى المحاكم الوطنية لإنصافه عن أعمال
-                فيها اعتداء على الحقوق الأساسية التي يمنحها له القانون. لا يجوز
-                القبض على أي إنسان أو حجزه أو نفيه تعسفاً. لكل إنسان الحق، على
-                قدم المساواة التامة مع الآخرين، في أن تنظر قضيته أمام محكمة
-                مستقلة نزيهة نظراً عادلاً علنياً للفصل في حقوقه والتزاماته وأية
-                تهمة جنائية توجه له.
+              <p class="font-light mb-8 lg:mb-16 sm:text-xl ">
+                يضم مجلس إدارة الكلية مجموعة من الخبراء والأكاديميين والمهنيين
+                البارزين الذين يجمعهم التزام مشترك بتعزيز مسيرة التعليم والبحث
+                العلمي. يعمل المجلس على وضع الرؤى الاستراتيجية وضمان تحقيق أهداف
+                الكلية في تقديم تعليم عالي الجودة، وبناء شراكات فاعلة مع المجتمع
+                المحلي والعالمي. تحت قيادتهم، تسعى الكلية دائمًا إلى الريادة
+                والابتكار في مختلف المجالات الأكاديمية والمهنية.
               </p>
               <a
                 href="/staff"
-                class="inline-flex flex-row-reverse gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#1E1E1E] rounded-lg hover:bg-[#637C65] focus:ring-4 focus:outline-none focus:ring-blue-300 hidden md:inline-flex"
+                class="inline-flex flex-row-reverse gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#1E1E1E] rounded-lg hover:bg-[#637C65] focus:ring-4 focus:outline-none focus:ring-blue-300 md:inline-flex"
               >
                 اكتشف المزيد
                 <svg
@@ -43,105 +59,25 @@ const Staff = () => {
                 </svg>
               </a>
             </div>
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-              <div class="items-center bg-[#293b1f]/20 rounded-lg shadow sm:flex ">
-                <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-end">
-                    <a href="#">Bonnie Green</a>
-                  </h3>
-                  <p class="text-sm text-end">CEO & Web Developer</p>
-                  <p class="mt-3 mb-4 font-light text-end ">
-                    Bonnie drives the technical strategy of the flowbite
-                    platform and brand.
-                  </p>
-                </div>
-                <a href="#">
-                  <img
-                    class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                    alt="Bonnie Avatar"
-                  />
-                </a>
-              </div>
-              <div class="items-center bg-[#293b1f]/20 rounded-lg shadow sm:flex ">
-                <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-end">
-                    <a href="#">Bonnie Green</a>
-                  </h3>
-                  <p class="text-sm text-end">CEO & Web Developer</p>
-                  <p class="mt-3 mb-4 font-light text-end ">
-                    Bonnie drives the technical strategy of the flowbite
-                    platform and brand.
-                  </p>
-                </div>
-                <a href="#">
-                  <img
-                    class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                    alt="Bonnie Avatar"
-                  />
-                </a>
-              </div>
-              <div class="items-center bg-[#293b1f]/20 rounded-lg shadow sm:flex ">
-                <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-end">
-                    <a href="#">Bonnie Green</a>
-                  </h3>
-                  <p class="text-sm text-end">CEO & Web Developer</p>
-                  <p class="mt-3 mb-4 font-light text-end ">
-                    Bonnie drives the technical strategy of the flowbite
-                    platform and brand.
-                  </p>
-                </div>
-                <a href="#">
-                  <img
-                    class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                    alt="Bonnie Avatar"
-                  />
-                </a>
-              </div>
-              <div class="items-center bg-[#293b1f]/20 rounded-lg shadow sm:flex ">
-                <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-end">
-                    <a href="#">Bonnie Green</a>
-                  </h3>
-                  <p class="text-sm text-end">CEO & Web Developer</p>
-                  <p class="mt-3 mb-4 font-light text-end ">
-                    Bonnie drives the technical strategy of the flowbite
-                    platform and brand.
-                  </p>
-                </div>
-                <a href="#">
-                  <img
-                    class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                    alt="Bonnie Avatar"
-                  />
-                </a>
-              </div>
+            <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {staff
+                .slice(0, 3)
+                .reverse()
+                .map((staff, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <StaffCard
+                      name={staff.name}
+                      role={staff.role}
+                      img={`/staff/${index + 1}.jpg`}
+                    />
+                  </motion.div>
+                ))}
             </div>
-            <a
-              href="/staff"
-              class=" inline-flex md:hidden items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#1E1E1E] rounded-lg hover:bg-[#637C65] focus:ring-4 focus:outline-none focus:ring-blue-300 "
-            >
-              See All Staff
-              <svg
-                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
           </div>
         </section>
       </div>

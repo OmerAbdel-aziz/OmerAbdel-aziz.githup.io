@@ -1,4 +1,4 @@
-import logo from "../../assets/images/GCST.png";
+import logo from "../../../public/assets/images/GCST.png";
 
 const Footer = () => {
   return (
@@ -65,7 +65,12 @@ const Footer = () => {
               Ghibaish College of Science & Technology
               <br />
               Providing High education since 1992
+              <br />
+              <span>
+                <a href="admin/login">Admin</a>{" "}
+              </span>
             </p>
+            <p></p>
           </div>
         </aside>
         <nav>

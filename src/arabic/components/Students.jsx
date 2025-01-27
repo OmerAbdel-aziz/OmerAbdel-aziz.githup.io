@@ -1,5 +1,9 @@
 import React from "react";
 import StudentCard from "./sub-components/StudentCard";
+import Admission from "../../../public/assets/images/addmission.jpg";
+import Academic from "../../../public/assets/images/academics.jpg";
+import Departments from "../../../public/assets/images/departments.jpg";
+
 const Students = () => {
   return (
     <div
@@ -11,35 +15,31 @@ const Students = () => {
           شؤون الطلاب
         </h2>
         <p class="font-light lg:mb-16 sm:text-xl ">
-          كل الناس سواسية أمام القانون ولهم الحق في التمتع بحماية متكافئة عنه
-          دون أية تفرقة، كما أن لهم جميعاً الحق في حماية متساوية ضد أي تمييز
-          يُخل بهذا الإعلان وضد أي تحريض على تمييز كهذا.
+          تلتزم إدارة شؤون الطلاب بتوفير بيئة داعمة ومحفزة لطلابنا، حيث نعمل على
+          تقديم خدمات متكاملة تشمل الإرشاد الأكاديمي، والأنشطة الطلابية، والدعم
+          النفسي والاجتماعي، بالإضافة إلى فرص التطوير المهني. نسعى جاهدين لضمان
+          تجربة جامعية غنية ومتوازنة، تُمكنكم من تحقيق أهدافكم الأكاديمية
+          والشخصية، وتعدكم لمواجهة تحديات المستقبل بثقة وكفاءة.
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center gap-16 px-10 md:px-0">
         {/* first card */}
         <StudentCard
           title={"القبول والتسجيل"}
-          description={
-            "لا يعرض أحد لتدخل تعسفي في حياته الخاصة أو أسرته أو مسكنه أو مراسلاته أو لحملات على شرفه وسمعته. ولكل شخص الحق في حماية القانون من مثل هذا التدخل أو "
-          }
           link={"/admission"}
+          image={Admission}
         />
         {/* second card */}
         <StudentCard
           title={"الارشاد الاكاديمي"}
-          description={
-            "لا يعرض أحد لتدخل تعسفي في حياته الخاصة أو أسرته أو مسكنه أو مراسلاته أو لحملات على شرفه وسمعته. ولكل شخص الحق في حماية القانون من مثل هذا التدخل  "
-          }
           link={"/academic"}
+          image={Academic}
         />
         {/* third card */}
         <StudentCard
           title={"اقسام الكلية"}
-          description={
-            "لا يعرض أحد لتدخل تعسفي في حياته الخاصة أو أسرته أو مسكنه أو مراسلاته أو لحملات على شرفه وسمعته. ولكل شخص الحق في حماية القانون "
-          }
           link={"/departments"}
+          image={Departments}
         />
       </div>
     </div>

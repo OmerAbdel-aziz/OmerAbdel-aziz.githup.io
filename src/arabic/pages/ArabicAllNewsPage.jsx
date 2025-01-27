@@ -29,10 +29,9 @@ const ArabicAllNewsPage = () => {
   return (
     <>
       <div
-        className="hero absolute top-0 min-h-[70vh] w-full"
+        className="hero absolute top-0 min-h-[50vh] w-full"
         style={{
-          backgroundImage:
-            "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+          backgroundImage: "url(../../assets/images/banner11.jpg)",
         }}
         lang="ar"
       >
@@ -63,12 +62,8 @@ const ArabicAllNewsPage = () => {
               </a>
             </div>
             <h1 className="mb-5 text-4xl font-bold">
-              العنوان الرئيسي لمحتوى هذه الصفحة
+              اطلع على اخر الأخبار و المستجدات المتعلقة بالكلية
             </h1>
-            <p className="mb-5">
-              يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا
-              عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.
-            </p>
           </div>
         </div>
       </div>

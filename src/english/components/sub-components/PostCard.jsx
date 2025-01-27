@@ -1,5 +1,5 @@
 import React from "react";
-import banner2 from "../../../assets/images/banner2.jpg";
+import banner2 from "../../../../public/assets/images/banner2.jpg";
 
 const Postcard = ({ id, title, content, date }) => {
   return (

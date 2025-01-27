@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/Logo.gif";
+import Logo from "../../../public/assets/images/GCST.png";
 import { Languages } from "lucide-react";
 import { useEffect, useState } from "react";
 

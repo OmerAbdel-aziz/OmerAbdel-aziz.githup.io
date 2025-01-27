@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/images/Logo.gif";
+import Logo from "../../../public/assets/images/Logo.gif";
 import { useState } from "react";
 
 const About = () => {
@@ -52,22 +52,28 @@ const About = () => {
                   {openIndex === 1 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        لكل شخص الحق في أن يلجأ إلى المحاكم الوطنية لإنصافه عن
-                        أعمال فيها اعتداء على الحقوق الأساسية التي يمنحها له
-                        القانون. لا يجوز القبض على أي إنسان أو حجزه أو نفيه
-                        تعسفاً. لكل إنسان الحق،
+                        أُنشِئَت كلية غبيش للعلوم والتكنولوجيا في غبيش عام 2017
+                        م كمؤسسةٍ أهلية خاصة، تُعنى بتدريس العلوم التقنية في
+                        مجالات الإدارة، الاقتصاد، القانون وتقنية المعلومات وهي
+                        تتبع إدارة التعليم الأهلي الخاص والاجنبي بوزارة التعليم
+                        العالي والبحث العلمي السودانية. تمنح الكلية خريجيها
+                        درجتي البكالوريوس والدبلوم في خمسة تخصصات ضمن برامج
+                        دراسية متميزة، وفق نظام الساعات المعتمدة، حيث يدرس
+                        الطالب 101ساعة معتمدة موزعة علي أربعةِ فصولٍ في تخصصاتِ
+                        درجة الدبلوم، و161-174 ساعة معتمدة موزعة علي ثمانيةِ
+                        فصولٍ دراسيةٍ موزعةٍ على أربعِ سنواتٍ لتخصصاتِ
+                        البكالوريوس.
                       </p>
                     </div>
                   )}
                 </div>
-
-                {/* Accordion Item 2 */}
+                {/* Accordion Item 2*/}
                 <div>
                   <button
                     onClick={() => toggleAccordion(2)}
-                    className="flex flex-row-reverse items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                    className="flex flex-row-reverse items-center justify-between w-full py-5 font-medium text-right text-gray-500 border-b border-gray-200 gap-3"
                   >
-                    <span>الرؤية</span>
+                    <span>الرسالة</span>
                     <svg
                       className={`w-3 h-3 transform ${
                         openIndex === 2 ? "rotate-180" : ""
@@ -88,22 +94,25 @@ const About = () => {
                   {openIndex === 2 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        لكل شخص الحق في أن يلجأ إلى المحاكم الوطنية لإنصافه عن
-                        أعمال فيها اعتداء على الحقوق الأساسية التي يمنحها له
-                        القانون. لا يجوز القبض على أي إنسان أو حجزه أو نفيه
-                        تعسفاً. لكل إنسان الحق،
+                        تسعى كلية غبيش للعلوم والتكنولوجيا لتقديم خدمات تعليمية
+                        وبحثية واستشارية متميزة على المستوى المحلي والإقليمي
+                        والعالمي مع الالتزام بالمسؤولية المجتمعية من خلال كادر
+                        بشري مؤهل، ومناهج متطورة، وبيئة تعليمية وتكنولوجية محفزة
+                        للإبداع، وشراكات محلية وقطرية بل عالمية فاعلة، تسهم في
+                        إعداد مخرجات كفؤة تلبي احتياجات سوق العمل ومتطلبات
+                        التنمية، وفقاً لأنظمة ومعايير الجودة والاعتماد
+                        الأكاديمي.
                       </p>
                     </div>
                   )}
                 </div>
-
                 {/* Accordion Item 3 */}
                 <div>
                   <button
                     onClick={() => toggleAccordion(3)}
                     className="flex flex-row-reverse items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                   >
-                    <span>الأهداف</span>
+                    <span>الرؤية</span>
                     <svg
                       className={`w-3 h-3 transform ${
                         openIndex === 3 ? "rotate-180" : ""
@@ -124,10 +133,72 @@ const About = () => {
                   {openIndex === 3 && (
                     <div className="py-5 border-b border-gray-200">
                       <p className="mb-2 text-gray-500">
-                        لكل شخص الحق في أن يلجأ إلى المحاكم الوطنية لإنصافه عن
-                        أعمال فيها اعتداء على الحقوق الأساسية التي يمنحها له
-                        القانون. لا يجوز القبض على أي إنسان أو حجزه أو نفيه
-                        تعسفاً. لكل إنسان الحق،
+                        أن تصبح كلية غبيش للعلوم والتكنولوجيا إحدى الكليات
+                        الرائدة محليا وإقليمياً والمتميزة عالمياً.
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Accordion Item 4 */}
+                <div>
+                  <button
+                    onClick={() => toggleAccordion(4)}
+                    className="flex flex-row-reverse items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                  >
+                    <span>الأهداف</span>
+                    <svg
+                      className={`w-3 h-3 transform ${
+                        openIndex === 4 ? "rotate-180" : ""
+                      }`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5 5 1 1 5"
+                      />
+                    </svg>
+                  </button>
+                  {openIndex === 4 && (
+                    <div className="py-5 border-b border-gray-200">
+                      <p className="mb-2 text-gray-500">
+                        <ol className="" lang="ar">
+                          <li>
+                            {" "}
+                            إكساب الطالب المعارف والمهارات في التخصصات
+                            الأكاديمية المختلفة{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            ربط المخرجات التعليمية بمتطلبات التنمية واحتياجات
+                            سوق العمل{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            الإسهام في دعم جهود البحث العلمي المعرفي والتطبيقي
+                            في المجالات المختلفة{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            توفير البنية التحتية اللازمة لدعم العملية التعليمية
+                            والخدمات والأنشطة الطلابية{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            التوسع في الشراكات وتطوير العلاقة مع الجامعات
+                            ومؤسسات البحث العلمي محلياً ودولياُ{" "}
+                          </li>
+                          <li>
+                            {" "}
+                            تعزيز دور الجامعة في خدمة المجتمع بتقديم برامج
+                            استشارية وتدريبية في مختلف جوانب التنمية{" "}
+                          </li>
+                        </ol>
                       </p>
                     </div>
                   )}

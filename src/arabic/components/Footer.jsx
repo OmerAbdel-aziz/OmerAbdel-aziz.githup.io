@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/GCST.png";
+import logo from "../../../public/assets/images/GCST.png";
 
 const Footer = () => {
   return (
@@ -43,6 +43,10 @@ const Footer = () => {
             كلية غبيش للعلوم و التقنية
             <br />
             رواد في مجال التعليم العالي منذ عام 1992
+            <br />
+            <span>
+              <a href="/admin/login">Admin</a>{" "}
+            </span>
           </p>
           <img src={logo} alt="" className="w-20 h-20 " />
         </div>

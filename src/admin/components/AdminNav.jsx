@@ -1,4 +1,4 @@
-import logo from "../../assets/images/GCST.png";
+import logo from "../../../public/assets/images/GCST.png";
 
 const AdminNav = () => {
   return (

@@ -32,6 +32,8 @@ import AboutEditingPanel from "./admin/pages/AboutEditingPanel";
 import NotFound from "./english/pages/NotFound";
 import PostEditingPanel from "./admin/pages/PostEditingPanel";
 import PostAddingPage from "./admin/pages/PostAddingPage";
+import LoginPage from "./admin/pages/LoginPage";
+import SignUpPage from "./admin/pages/SignUpPage";
 
 function App() {
   return (
@@ -86,6 +88,8 @@ function App() {
           <AdminLayout>
             <Routes>
               <Route path="/" element={<AdminPanel />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignUpPage />} />
               <Route path="/add-post" element={<PostAddingPage />} />
               <Route path="/edit-post/:id" element={<PostEditingPanel />} />
               <Route path="/edit-about/:id" element={<AboutEditingPanel />} />

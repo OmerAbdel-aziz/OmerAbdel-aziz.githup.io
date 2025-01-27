@@ -1,4 +1,3 @@
-import banner2 from "../../assets/images/banner2.jpg";
 import { useState, useEffect } from "react";
 import Postcard from "./sub-components/PostCard";
 import { supabase } from "../../utils/supabase";

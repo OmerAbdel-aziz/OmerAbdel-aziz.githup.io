@@ -1,4 +1,7 @@
 import StudentCard from "./sub-components/StudentCard";
+import Admission from "../../../public/assets/images/addmission.jpg";
+import Academic from "../../../public/assets/images/academics.jpg";
+import Departments from "../../../public/assets/images/departments.jpg";
 
 const Students = () => {
   return (
@@ -19,26 +22,20 @@ const Students = () => {
         {/* first card */}
         <StudentCard
           title={"Admission"}
-          description={
-            "Lorem ipsum dolor sit ame consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          }
           link={"/english/admission"}
+          image={Admission}
         />
         {/* second card */}
         <StudentCard
           title={"Academics"}
-          description={
-            "Lorem ipsum dolor sit ame consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          }
           link={"/english/academic"}
+          image={Academic}
         />
         {/* third card */}
         <StudentCard
           title={"Departments"}
-          description={
-            "Lorem ipsum dolor sit ame consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-          }
           link={"/english/departments"}
+          image={Departments}
         />
       </div>
     </div>

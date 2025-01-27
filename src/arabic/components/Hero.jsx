@@ -1,7 +1,7 @@
 import React from "react";
-import banner11 from "../../assets/images/banner11.jpg";
-import banner2 from "../../assets/images/banner2.jpg";
-import banner3 from "../../assets/images/banner3.jpg";
+import banner11 from "../../../public/assets/images/banner11.jpg";
+import banner2 from "../../../public/assets/images/banner2.jpg";
+import banner3 from "../../../public/assets/images/banner3.jpg";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -22,10 +22,8 @@ const Hero = () => {
                   مرحبا بكم في كلية غبيش التقنية
                 </h1>
                 <p className="mb-5">
-                  لقد هالني ذنبي بخطب مبرح وبارزت خلافي بفعل مجرح أبوء بقلب
-                  بالخطايا مقرح فجد بمتاب عن مقر مصرح بذنب وتقصير وطول صدود كئيب
-                  حزين خاشع متورع يسر ويبدي مخلصا توب مقلع يقوم
-                  على صدق بما هو مدعي
+                  نقدم لكم بيئة تعليمية ملهمة تُعِدُّ قادة الغد من خلال برامج
+                  أكاديمية متميزة وفرص بحثية مبتكرة
                 </p>
               </div>
             </div>
@@ -57,13 +55,11 @@ const Hero = () => {
             <div className="hero-content text-neutral-content text-center">
               <div className="max-w-md md:max-w-2xl md:justify-start md:text-right md:items-end md:left-[30%] md:relative px-10 md:px-0">
                 <h1 className="mb-5 text-5xl font-bold leading-normal">
-                  مرحبا بكم في كلية غبيش التقنية
+                  اكتشف عالمًا من الفرص
                 </h1>
                 <p className="mb-5">
-                  لقد هالني ذنبي بخطب مبرح وبارزت خلافي بفعل مجرح أبوء بقلب
-                  بالخطايا مقرح فجد بمتاب عن مقر مصرح بذنب وتقصير وطول صدود كئيب
-                  حزين خاشع متورع يسر ويبدي مخلصا توب مقلع يقوم
-                  على صدق بما هو مدعي
+                  انضم إلى مجتمعنا الأكاديمي الحيوي واستفد من برامجنا المتنوعة
+                  التي تلبي طموحاتك العلمية والمهنية.
                 </p>
               </div>
             </div>
@@ -94,13 +90,11 @@ const Hero = () => {
             <div className="hero-content text-neutral-content text-center">
               <div className="max-w-md md:max-w-2xl md:justify-start md:text-right md:items-end md:left-[30%] md:relative px-10 md:px-0">
                 <h1 className="mb-5 text-5xl font-bold leading-normal">
-                  مرحبا بكم في كلية غبيش التقنية
+                  نحو تميزٍ بلا حدود
                 </h1>
                 <p className="mb-5">
-                  لقد هالني ذنبي بخطب مبرح وبارزت خلافي بفعل مجرح أبوء بقلب
-                  بالخطايا مقرح فجد بمتاب عن مقر مصرح بذنب وتقصير وطول صدود كئيب
-                  حزين خاشع متورع يسر ويبدي مخلصا توب مقلع يقوم
-                  على صدق بما هو مدعي
+                  نلتزم بتوفير تجربة تعليمية شاملة تُنمّي المهارات وتُطلق
+                  الإبداع لبناء مستقبل مشرق
                 </p>
               </div>
             </div>

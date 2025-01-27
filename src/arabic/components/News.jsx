@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Postcard from "../../english/components/sub-components/PostCard";
+import Postcard from "../components/sub-components/Postcard";
 import { supabase } from "../../utils/supabase";
 
 const News = ({ isHome = false }) => {
@@ -40,7 +40,7 @@ const News = ({ isHome = false }) => {
             <div className="flex flex-col md:flex-row gap-4 items-start md:items-center md:justify-between justify-center w-full">
               <a
                 href="/all-news-ar"
-                className="inline-flex flex-row-reverse gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#1E1E1E] rounded-lg hover:bg-[#637C65] focus:ring-4 focus:outline-none focus:ring-blue-300 hidden md:inline-flex relative bottom-0"
+                className="flex-row-reverse gap-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#1E1E1E] rounded-lg hover:bg-[#637C65] focus:ring-4 focus:outline-none focus:ring-blue-300 hidden md:inline-flex relative bottom-0"
               >
                 اكتشف المزيد
                 <svg

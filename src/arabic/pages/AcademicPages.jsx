@@ -2,7 +2,7 @@ const AcademicPage = () => {
   return (
     <>
       <div
-        className="hero absolute top-0 min-h-[70vh] w-full"
+        className="hero absolute top-0 h-[20vh] w-full"
         style={{
           backgroundImage:
             "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
@@ -38,10 +38,6 @@ const AcademicPage = () => {
             <h1 className="mb-5 text-5xl font-bold">
               العنوان الرئيسي لمحتوى هذه الصفحة
             </h1>
-            <p className="mb-5">
-              يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا
-              عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.
-            </p>
           </div>
         </div>
       </div>

@@ -1,15 +1,78 @@
-import { Button, Input, Textarea, Typography } from "@material-tailwind/react";
-
+import React, { useRef } from "react";
+import { useForm } from "react-hook-form";
+import { Button, Typography } from "@material-tailwind/react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import emailjs from "emailjs-com";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Form } from "@/components/ui/form";
+import CustomFormFiled from "../../english/components/sub-components/CustomFormFiled";
+import { Textarea } from "../../components/ui/textarea";
 
 const containerStyle = {
   width: "100%",
   height: "100%",
 };
+function onSubmit(values) {
+  e.preventDefault();
 
+  emailjs
+    .sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      form.current,
+      "YOUR_USER_ID"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Failed to send message, please try again.");
+      }
+    );
+}
 const location = [10.5611937, 27.3402381];
 
+const schema = z.object({
+  firstName: z.string().nonempty("First name is required"),
+  lastName: z.string().nonempty("Last name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().nonempty("Message is required"),
+});
+
 const Contact = () => {
+  const form = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      username: "",
+      email: "",
+    },
+  });
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_USER_ID"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message, please try again.");
+        }
+      );
+  };
+
   return (
     <div
       className="flex w-full flex-col bg-white relative top-[555px] "
@@ -43,101 +106,75 @@ const Contact = () => {
                 </Marker>
               </MapContainer>
             </div>
-            <form action="#" className="flex flex-col gap-4 lg:max-w-lg ml-10">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Typography
-                    variant="small"
-                    className="mb-2 text-left font-medium !text-gray-900"
-                  >
-                    First Name
-                  </Typography>
-                  <Input
-                    color="gray"
-                    size="lg"
-                    placeholder="First Name"
-                    name="first-name"
-                    className="border-none  "
-                    containerProps={{
-                      className: "!min-w-full",
-                    }}
-                    labelProps={{
-                      className: "hidden",
-                    }}
-                  />
-                </div>
-                <div>
-                  <Typography
-                    variant="small"
-                    className="mb-2 text-left font-medium !text-gray-900"
-                  >
-                    Last Name
-                  </Typography>
-                  <Input
-                    color="gray"
-                    size="lg"
-                    placeholder="Last Name"
-                    name="last-name"
-                    className="border-white "
-                    containerProps={{
-                      className: "!min-w-full border-none",
-                    }}
-                    labelProps={{
-                      className: "hidden ",
-                    }}
-                  />
-                </div>
-              </div>
-              <div>
-                <Typography
-                  variant="small"
-                  className="mb-2 text-left font-medium !text-gray-900"
-                >
-                  Your Email
-                </Typography>
-                <Input
-                  color="gray"
-                  size="lg"
-                  placeholder="name@email.com"
-                  name="email"
-                  className="border-none "
-                  containerProps={{
-                    className: "!min-w-full",
-                  }}
-                  labelProps={{
-                    className: "hidden",
-                  }}
-                />
-              </div>
-              <div>
-                <Typography
-                  variant="small"
-                  className="mb-2 text-left font-medium !text-gray-900"
-                >
-                  Your Message
-                </Typography>
-                <Textarea
-                  rows={6}
-                  color="gray"
-                  size="lg"
-                  placeholder="Message"
-                  name="message"
-                  className="border-none "
-                  containerProps={{
-                    className: "!min-w-full",
-                  }}
-                  labelProps={{
-                    className: "hidden",
-                  }}
-                />
-              </div>
-              <button
-                type="submit"
-                className="block w-full rounded-md bg-[#1E1E1E] hover:bg-[#637C65] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#637C65] "
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
               >
-                Submit
-              </button>
-            </form>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-col">
+                    <Typography
+                      variant="small"
+                      className="mb-2 font-medium !text-gray-900 text-start"
+                    >
+                      FirstName
+                    </Typography>
+                    <CustomFormFiled
+                      name="firstName"
+                      label="First Name"
+                      control={form.control}
+                      className="border-none"
+                    />
+                  </div>
+
+                  <div className="flex flex-col">
+                    <Typography
+                      variant="small"
+                      className="mb-2 font-medium !text-gray-900  text-start"
+                    >
+                      Last Name
+                    </Typography>
+                    <CustomFormFiled
+                      name="lastName"
+                      label="Last Name"
+                      control={form.control}
+                      className="border-none"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography
+                    variant="small"
+                    className="font-medium !text-gray-900 text-start"
+                  >
+                    Email
+                  </Typography>
+                  <CustomFormFiled
+                    name="email"
+                    label="Email"
+                    control={form.control}
+                    className="border-none"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Typography
+                    variant="small"
+                    className="text-start font-medium !text-gray-900"
+                  >
+                    Massage
+                  </Typography>
+                  <Textarea className="focus:border-[#637C65] rounded-lg hover:border-[#637C65] text-end" />
+                </div>
+                <div className="flex w-full">
+                  <Button
+                    type="submit"
+                    className="bg-[#1E1E1E] hover:bg-[#637C65] w-full"
+                  >
+                    Send Message
+                  </Button>
+                </div>
+              </form>
+            </Form>
           </div>
         </div>
       </section>
